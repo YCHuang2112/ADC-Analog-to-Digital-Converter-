@@ -1,0 +1,19 @@
+Environment:
+  i) Matlab version: > R2019b  (because of the simulink models)
+
+Prerequisite:
+  i) [SDToolbox](https://www.mathworks.com/matlabcentral/fileexchange/25811-sdtoolbox-2?s_tid=srchtitle)
+  ii) [Delta Sigma Toolbox/Schreier Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox)
+  And in matlab codes, please change xxx in addpath('xxx') function to your toolbox paths.
+
+Run:
+  i) Pipeline_m.m:  11-stage Pipeline ADC with each stage having a 3-level internal quantizer   
+  
+Explanation: 
+  Users can configure following parameters:
+  i) Sampling (fs, n_sample (points), fB)
+  ii) Input signal  (fsig, Vsig_dB)
+  
+Notice:
+  Users should take care of the following issues themselves
+  i) Spectrum leakage (coherent sampling)
