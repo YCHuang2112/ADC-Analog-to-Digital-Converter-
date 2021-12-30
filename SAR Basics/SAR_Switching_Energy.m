@@ -156,19 +156,19 @@ end
  Average_SW_Energy_MCS= sum(Average_SW_Energy_each_bit_MCS);
  
  
-%  figure(1);
-% set(gcf, 'color', [1 1 1]);
-%  hold on;
-%  plot(Energy_of_each_Dcode_CS,'LineWidth',2);
-%  plot(Energy_of_each_Dcode_MS,'LineWidth',2);
-%  plot(Energy_of_each_Dcode_MCS,'LineWidth',2);
-%  hold off;
-%  xlim([1,2^B_SAR]);
-% set(gca, 'FontSize', 12);
-% xlabel('Code(s)','FontSize',14);
-% ylabel('Switching Energy (CV_r_e_f ^2)','FontSize',14);
+figure(1);
+set(gcf, 'color', [1 1 1]);
+hold on;
+plot(Energy_of_each_Dcode_CS,'LineWidth',2);
+plot(Energy_of_each_Dcode_MS,'LineWidth',2);
+plot(Energy_of_each_Dcode_MCS,'LineWidth',2);
+hold off;
+xlim([1,2^B_SAR]);
+set(gca, 'FontSize', 12);
+xlabel('Code(s)','FontSize',14);
+ylabel('Switching Energy (CV_r_e_f ^2)','FontSize',14);
 % %  yticks([100 400 800 1200 1600 2000]);
-% legend({'CS','MS','MCS'},'FontSize',16);
+legend({'CS','MS','MCS'},'FontSize',16);
 
 Normalized_Eavg_CS  = Average_SW_Energy_CS /Average_SW_Energy_CS;
 Normalized_Eavg_MS  = Average_SW_Energy_MS /Average_SW_Energy_CS;
