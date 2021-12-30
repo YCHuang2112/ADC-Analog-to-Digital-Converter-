@@ -4,6 +4,7 @@ Environment:
 Prerequisite:
   i) [SDToolbox](https://www.mathworks.com/matlabcentral/fileexchange/25811-sdtoolbox-2?s_tid=srchtitle)
   ii) [Delta Sigma Toolbox/Schreier Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox)
+  And in matlab codes, please change xxx in addpath('xxx') function to your toolbox paths.
 
 Run:
   i) TB_SAR:  The basic function of SAR ADC
