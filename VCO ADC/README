@@ -1,0 +1,23 @@
+Environment:
+  i) Matlab version: > R2019b  (because of the simulink models)
+
+Prerequisite:
+  i) [SDToolbox](https://www.mathworks.com/matlabcentral/fileexchange/25811-sdtoolbox-2?s_tid=srchtitle)
+  ii) [Delta Sigma Toolbox/Schreier Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox)
+  And in matlab codes, please change xxx in addpath('xxx') function to your toolbox paths.
+
+Run:
+  i) vco_counter_m.m:  VCO ADC implemented with counter
+  ii) vco_m.m: 1st-order noise shaping VCO ADC implemented with XOR gates [ref: A 12-Bit__ 10-MHz Bandwidth, Continuous-Time ADC With a 5-Bit, 950-MS__s VCO-Based Quantize]
+  
+Explanation: 
+  Users can configure following parameters:
+  i) Sampling (fs, n_sample (points), fB, osr)
+  ii) VCO free-running frequency  (fvco)
+  iii) Vco_sensitivity Hz/V  (fsens)
+
+
+  
+Notice:
+  Users should take care of the following issues themselves
+  i) Spectrum leakage (coherent sampling)
