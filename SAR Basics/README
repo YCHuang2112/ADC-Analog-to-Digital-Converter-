@@ -1,1 +1,22 @@
 To run: Open SAR_Switching_Energy.m in Matlab and execute it.
+
+
+Explanation: This file only contain tree switching schemes:  
+    i)      Conventional switching Scheme (CS) 
+    ii)     Monotonic switching Scheme  (MS)
+    iii)    Merge Capacitor switching Scheme (MCS)
+    
+   And basically, they can be divided into two types of CDAC sampling categories:  
+   i)  Bottom-plate sampling:  CS
+   ii) Top-plate sampling: MS and MCS
+   
+   CDACs of all the swithing schemes are binary-weighted CDACs.
+   
+   This file shows:
+   i) Energy consumption (C_u(V_ref)^2) of each code. (C_u is the unit capacitance of the CDAC, V_ref^2 is the reference voltage) 
+   ii) Energy of each swithing on the CDAC
+   iii) Average switching Energy of each bit
+   iv) Average switching Energy of each scheme
+   v) Normalized swithing Energy of each scheme (Average switching energy of each switching scheme with repect to CS' average switching energy)
+   
+   To set the bit (resolution) of the SAR, please change the parameter B_SAR in the file: SAR_Switching_Energy.
