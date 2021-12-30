@@ -1,3 +1,24 @@
 Prerequisite:
   i) [SDToolbox](https://www.mathworks.com/matlabcentral/fileexchange/25811-sdtoolbox-2?s_tid=srchtitle)
   ii) [Delta Sigma Toolbox/Schreier Toolbox](https://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox)
+
+Run:
+  i) TB_SAR:  basci function of SAR ADC
+  ii) TB_SAR_Histogram: simulation of SAR CDAC mismatch
+  iii) TB_SAR_NS: basic function of noise-shaping SAR ADC (can be configured as (0,1st,2nd)-order noise shaping)
+  
+Explanation: 
+  Basically, the code transfer Capaitor-DAC swithing into Voltage-DAC swithing.
+  Users can configure following parameters:
+  i) sampling (fclk, N (points), fB, fnyq, osr ...)
+  ii) input signals  (fsig, vin_amp, ...)
+  iii) reference voltages  (vfs, vref, ...)
+  iv) resoltion of SAR ADC (B)
+  v) CDAC capacitance array (Cp_array, Cn_array)
+  vi) CDAC unit capacitance (Cu_mu)
+  vii) CDAC parasitic capacitance (Cp, ...)
+  viii) variance of CDAC unit capacitance with repect to Cu_mu (Cu_sigma)
+  
+Notice:
+  Users should take care of the following issues themselves
+  i) spectrum leakage (coherent sampling)
