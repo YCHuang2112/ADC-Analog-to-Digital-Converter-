@@ -9,7 +9,7 @@ Prerequisite:
 Run:
   i) vco_counter_m.m:  VCO ADC implemented with counter
   ii) vco_m.m: 1st-order noise shaping VCO ADC implemented with XOR gates [ref: A 12-Bit__ 10-MHz Bandwidth, Continuous-Time ADC With a 5-Bit, 950-MS__s VCO-Based Quantize]
-  
+               with 33 inverters forming the VCO loop. 
 Explanation: 
   Users can configure following parameters:
   i) Sampling (fs, n_sample (points), fB, osr)
