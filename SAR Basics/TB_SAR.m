@@ -1,6 +1,6 @@
 %% include Toolbox
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\schreier\delsig');
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
+addpath ('D:\LocalLaptop\â€ºâ€œâ€˜Ã¨\Å’Â¤â€¹â€ ÂÅ \adc\Matlab_Toolbox\schreier\delsig');
+addpath ('D:\LocalLaptop\â€ºâ€œâ€˜Ã¨\Å’Â¤â€¹â€ ÂÅ \adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
 %% global parameter setting
 % global voltage setting
 vref=0.9;
@@ -82,7 +82,7 @@ Number_sig_bins = 2;
 loc_sig_bin = fbin_sig * N + 1;
 plot(linspace(0,fnyq/2,N/2+1), 10*log10(cumsum([10.^(ptot(1:loc_sig_bin-Number_sig_bins)/10); zeros((Number_sig_bins-1)*2+1,1); 10.^(ptot(loc_sig_bin+Number_sig_bins:N/2+1)/10); ])), 'g','linewidth',2.0);
 text_handle= text(floor(fB/2),-50, sprintf('SQNR = %4.1fdB',snr),'FontSize',18);
-xlabel('Frequency [Hz]'); ylabel('Magnitude [dB]'); title('Incremental ADC'); axis([0 fnyq/2 -130 0]);
+xlabel('Frequency [Hz]'); ylabel('PSD [dB/Hz]'); title('Incremental ADC'); axis([0 fnyq/2 -130 0]);
 title ([ 'SAR;  V_P= ',num2str(vin_amp_dB),'dBFS;  ','Freq=',num2str(fsig/1e3),'kHz;  ' ,'Conversion Rate=',num2str(fnyq/1e6),'MHz; ' ]);
 legend('SQNR');
 hold off;
