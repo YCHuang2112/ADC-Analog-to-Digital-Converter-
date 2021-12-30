@@ -1,7 +1,7 @@
 %% include Toolbox
 % clear all;
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\schreier\delsig');
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
+addpath ('D:\LocalLaptop\â€ºâ€œâ€˜Ã¨\Å’Â¤â€¹â€ ÂÅ \adc\Matlab_Toolbox\schreier\delsig');
+addpath ('D:\LocalLaptop\â€ºâ€œâ€˜Ã¨\Å’Â¤â€¹â€ ÂÅ \adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
 %% global parameter setting
 % global voltage setting
 vref=0.9;
@@ -120,7 +120,7 @@ set(gca, 'FontSize',20);
 % plot(linspace(0,fnyq/2,N/2)/1e3, ptot(1:N/2), 'r','linewidth',2.0); 
 % hold off;
 % text_handle= text(10,-50, sprintf('SQNR = %4.1fdB',snr),'FontSize',32);
-% xlabel('Frequency [kHz]','FontSize',20); ylabel('PSD [V^2/Hz]','FontSize',20);  axis([0 fnyq/2/1e3 -130 0]);
+% xlabel('Frequency [kHz]','FontSize',20); ylabel('PSD [dB/Hz]','FontSize',20);  axis([0 fnyq/2/1e3 -130 0]);
 % title ({[ 'SAR 10-bit;  V_P_P= ',num2str(vin_amp_dB),'dBFS;  '],['F_s_i_g=',num2str(fsig/1e3),'kHz;  ','F_B=',num2str(fnyq/1e6/2),'MHz; ' ]});
 % legend('SQNR');
 % legend('boxoff');
