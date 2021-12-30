@@ -1,6 +1,6 @@
 clear;
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\schreier\delsig');
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
+addpath ('D:\LocalLaptop\â€ºâ€œâ€˜Ã¨\Å’Â¤â€¹â€ ÂÅ \adc\Matlab_Toolbox\schreier\delsig');
+addpath ('D:\LocalLaptop\â€ºâ€œâ€˜Ã¨\Å’Â¤â€¹â€ ÂÅ \adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
 
 fsig = 13e6; n_sample=100; fB=50e6; fs=fB*2; ts=1/fs; 
 Ts = ts;
@@ -30,7 +30,7 @@ figure(2);
 set(gcf, 'color', [1 1 1]);
 plot( linspace(0,fs/2/1e6,n_sample/2+1),ptot_test(1:n_sample/2+1));
 text_handle= text(floor(fB/2.5/1e6),-20, sprintf('SQNR = %4.1f dB',snr_test),'Color','green','FontSize',24);
-xlabel('Frequency [MHz]','FontSize',24); ylabel('PSD [V^2/Hz]','FontSize',24);  axis([0 fB/1e6 -100 0]); 
+xlabel('Frequency [MHz]','FontSize',24); ylabel('PSD [dB/Hz]','FontSize',24);  axis([0 fB/1e6 -100 0]); 
 title ({ ['3-Qlev 11-Stage Pipeline ADC',''];['V_P_P = ',num2str(Vsig_dB),' dBFS;  ','F_s_i_g = ',num2str(fsig/1e6),' MHz;  ' ,'F_B = ',num2str(fs/2/1e6),' MHz; ']},'FontSize',14);
 set(gca, 'FontSize',13);
 set(gcf, 'Position',  [488   342   580   420]);
