@@ -1,9 +1,9 @@
 clear;
 
-addpath ('D:\LocalLaptop\õìëË\å§ãÜèä\adc\Matlab_Toolbox\schreier\delsig');
-addpath ('D:\LocalLaptop\õìëË\å§ãÜèä\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
-% addpath ('D:\LocalLaptop\õìëË\å§ãÜèä\adc\Matlab_Toolbox\MIT Design Tools\HSPICE_Toolbox\HspiceToolbox');
-% addpath ('D:\LocalLaptop\õìëË\å§ãÜèä\adc\Matlab_Toolbox\csvimport');
+addpath ('D:\LocalLaptop\Â∞àÈ°å\Á†îÁ©∂ÊâÄ\adc\Matlab_Toolbox\schreier\delsig');
+addpath ('D:\LocalLaptop\Â∞àÈ°å\Á†îÁ©∂ÊâÄ\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
+% addpath ('D:\LocalLaptop\Â∞àÈ°å\Á†îÁ©∂ÊâÄ\adc\Matlab_Toolbox\MIT Design Tools\HSPICE_Toolbox\HspiceToolbox');
+addpath ('D:\LocalLaptop\Â∞àÈ°å\Á†îÁ©∂ÊâÄ\adc\Matlab_Toolbox\csvimport');
 
 %% 8 Chips
 Corner_color = [[13  105 255];[0   153 255];[0   180 200];[72  234 195];[0   255 204];
@@ -54,7 +54,7 @@ VFS = PWRA*2;
 N_bits = 10;  
 
 %% File Lists
-%%% SAR02Å@-----------------------------------------------------------------
+%%% SAR02„ÄÄ-----------------------------------------------------------------
 
 
 %% set CLK Parameters
@@ -155,16 +155,16 @@ lengend_txt={};
 for i_chip=1:size(Chip_Dir,2)
     plot(f/ConRate_U,ptot_test_results(1:N_samples/2+1,i_chip),'Color',Corner_color(i_chip,:),'linewidth',2.0);
     plot(f/ConRate_U,10*log10(cumsum([ zeros(fbin_L_sp-1,1); 10.^(ptot_test_results(fbin_L_sp:fbin-shift,i_chip)/10); zeros(shift*2-1,1); 10.^(ptot_test_results(fbin+shift:fbin_H_sp+1,i_chip)/10); ])), 'Color',Corner_color(i_chip,:),'linewidth',2.0);
-%     text_handle= text(floor(txt_xloc),-40, sprintf('ENOBÅ@= %4.1fBits',enob_test_results(i_chip)),'Color','green','FontSize',18);
+%     text_handle= text(floor(txt_xloc),-40, sprintf('ENOB„ÄÄ= %4.1fBits',enob_test_results(i_chip)),'Color','green','FontSize',18);
 %     txt = [sprintf('%5s',num2str(Corner_PWRA(i_results))),'V ',Corner_Name{i_results},sprintf(' %3s',num2str(Corner_Temp(i_results))),char(0176),'C',];
     txt = ['chip',num2str(i_chip);];
     lengend_txt(end+1) = {txt};
 end
 for i_chip=1:size(Chip_Dir,2)
-%     text_handle= text(txt_sndr_xloc,-2-i_chip*10, sprintf('SNDRÅ@= %4.1fdB',sndr_test_results(i_chip)),'Color',Corner_color_txt(i_chip,:),'FontSize',12,'HorizontalAlignment',txt_sndr_H);
-%     text_handle= text(txt_sfdr_xloc,-2-i_chip*10, sprintf('SFDRÅ@= %4.1fdB',sfdr_test_results(i_chip)),'Color',Corner_color_txt(i_chip,:),'FontSize',12,'HorizontalAlignment',txt_sfdr_H);
-    text_handle= text(txt_sndr_xloc,-2-i_chip*10, sprintf('%2d: SNDRÅ@= %4.1fdB',i_chip,sndr_test_results(i_chip)),'Color','black','FontSize',12,'HorizontalAlignment',txt_sndr_H);
-    text_handle= text(txt_sfdr_xloc,-2-i_chip*10, sprintf('SFDRÅ@= %4.1fdB',sfdr_test_results(i_chip)),'Color','black','FontSize',12,'HorizontalAlignment',txt_sfdr_H);  
+%     text_handle= text(txt_sndr_xloc,-2-i_chip*10, sprintf('SNDR„ÄÄ= %4.1fdB',sndr_test_results(i_chip)),'Color',Corner_color_txt(i_chip,:),'FontSize',12,'HorizontalAlignment',txt_sndr_H);
+%     text_handle= text(txt_sfdr_xloc,-2-i_chip*10, sprintf('SFDR„ÄÄ= %4.1fdB',sfdr_test_results(i_chip)),'Color',Corner_color_txt(i_chip,:),'FontSize',12,'HorizontalAlignment',txt_sfdr_H);
+    text_handle= text(txt_sndr_xloc,-2-i_chip*10, sprintf('%2d: SNDR„ÄÄ= %4.1fdB',i_chip,sndr_test_results(i_chip)),'Color','black','FontSize',12,'HorizontalAlignment',txt_sndr_H);
+    text_handle= text(txt_sfdr_xloc,-2-i_chip*10, sprintf('SFDR„ÄÄ= %4.1fdB',sfdr_test_results(i_chip)),'Color','black','FontSize',12,'HorizontalAlignment',txt_sfdr_H);  
 end
 xlabel(['Frequency [',unit2,'Hz]'],'FontSize',20); ylabel('PSD [dB/Hz]','FontSize',20);  axis([0 fB/ConRate_U -120 0]); 
 xlim([0 fB/ConRate_U]);
