@@ -1,8 +1,5 @@
 clear;
 
-addpath ('D:\LocalLaptop\專題\研究所\adc\Matlab_Toolbox\schreier\delsig');
-addpath ('D:\LocalLaptop\專題\研究所\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
-%addpath ('D:\LocalLaptop\專題\研究所\adc\Matlab_Toolbox\MIT Design Tools\HSPICE_Toolbox\HspiceToolbox');
 addpath ('D:\LocalLaptop\專題\研究所\adc\Matlab_Toolbox\csvimport');
 
 %% 8 Chips
