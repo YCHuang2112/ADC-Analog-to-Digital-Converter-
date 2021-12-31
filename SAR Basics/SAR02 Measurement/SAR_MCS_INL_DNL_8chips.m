@@ -1,9 +1,9 @@
 clear;
 
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\schreier\delsig');
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\MIT Design Tools\HSPICE_Toolbox\HspiceToolbox');
-addpath ('D:\LocalLaptop\›“‘è\Œ¤‹†Š\adc\Matlab_Toolbox\csvimport');
+addpath ('D:\LocalLaptop\å°ˆé¡Œ\ç ”ç©¶æ‰€\adc\Matlab_Toolbox\schreier\delsig');
+addpath ('D:\LocalLaptop\å°ˆé¡Œ\ç ”ç©¶æ‰€\adc\Matlab_Toolbox\[Malcovati] SDtoolbox\SDtoolbox');
+%addpath ('D:\LocalLaptop\å°ˆé¡Œ\ç ”ç©¶æ‰€\adc\Matlab_Toolbox\MIT Design Tools\HSPICE_Toolbox\HspiceToolbox');
+addpath ('D:\LocalLaptop\å°ˆé¡Œ\ç ”ç©¶æ‰€\adc\Matlab_Toolbox\csvimport');
 
 %% 8 Chips
 Corner_color = [[13  105 255];[0   153 255];[0   180 200];[72  234 195];[0   255 204];
@@ -45,7 +45,7 @@ end
 filename_postfix= ['\vin_',num2str(Vsig),'Vpp_',num2str(fsig/fsig_U),unit1,'Hz_ConRate',num2str(ConRate/ConRate_U),unit2,'Hz_Np4M_Dout_Hist.csv'];
 
 %% File Lists
-%%% SAR02@-----------------------------------------------------------------
+%%% SAR02ã€€-----------------------------------------------------------------
 %%% **  CLK--SILICON LABS Si5338-EVB REV 1.0, SIGNAL--Audio Precision SYS-2722
 
 %*********************************  END: Parameter settings  ********************************
