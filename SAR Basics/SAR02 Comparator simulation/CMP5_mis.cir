@@ -1,0 +1,74 @@
+** Generated for: hspiceD
+** Generated on: May 20 14:23:35 2021
+** Design library name: SAR02_MCS_MOM_10b
+** Design cell name: CMP5_DUMMY
+** Design view name: schematic
+
+
+*****  .TEMP 25.0
+*****  .OPTION
+*****  +    ARTIST=2
+*****  +    INGOLD=2
+*****  +    PARHIER=LOCAL
+*****  +    PSF=2
+
+** Library name: SAR02_MCS_MOM_10b
+** Cell name: inv_adc
+** View name: schematic
+.subckt inv_adc a dvdd g sub y
+xmn1 y a g sub nch_mis l=nl w='nw*1' m=nm
+xmp1 y a dvdd dvdd pch_mis l=pl w='pw*1' m=pm
+.ends inv_adc
+** End of subcircuit definition.
+
+** Library name: SAR02_MCS_MOM_10b
+** Cell name: nor2_adc
+** View name: schematic
+.subckt nor2_adc a b dvdd g sub y
+xmn1 y b g sub nch_mis l=nl w='nw*1' m=nm
+xm1 y a g sub nch_mis l=nl w='nw*1' m=nm
+xmp1 net034 b dvdd dvdd pch_mis l=pl w='pw*1' m=pm
+xm0 y a net034 dvdd pch_mis l=pl w='pw*1' m=pm
+.ends nor2_adc
+** End of subcircuit definition.
+
+** Library name: SAR02_MCS_MOM_10b
+** Cell name: CMP5_DUMMY
+** View name: schematic
+xm31 net017 clk_b avdd2 avdd2 pch_mis l=180e-9 w=1e-6 m=1
+xm28 sn1 inp net017 avdd2 pch_mis l=900e-9 w=1e-6 m=1
+xm30 sp1 inn net017 avdd2 pch_mis l=900e-9 w=1e-6 m=1
+xm22 net54 clk avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm21 net38 clk avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm1 net54 avdd avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm15 net056 net053 avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm13 net053 net056 avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm3 outn net056 avdd avdd pch_mis l=180e-9 w=2e-6 m=1
+xm0 net38 avdd avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm4 outp net053 avdd avdd pch_mis l=180e-9 w=2e-6 m=1
+xm18 net056 clk avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xm17 net053 clk avdd avdd pch_mis l=180e-9 w=2.5e-6 m=1
+xi16 clk avdd agnd sub clk_b inv_adc nl=180e-9 nw=1e-6 nm=1 pl=180e-9 pw=2e-6 pm=1
+xi14 clk_b_cmp_d2 avdd agnd sub clk_b_cmp_d3 inv_adc nl=180e-9 nw=1e-6 nm=2 pl=180e-9 pw=2e-6 pm=2
+xi33 clk_b_cmp_d1 avdd agnd sub clk_b_cmp_d2 inv_adc nl=180e-9 nw=1e-6 nm=1 pl=180e-9 pw=2e-6 pm=1
+xi15 clk_b_cmp_d3 avdd agnd sub ready inv_adc nl=180e-9 nw=1e-6 nm=4 pl=180e-9 pw=2e-6 pm=4
+xm27 sp1 clk_b agnd agnd nch_mis l=900e-9 w=500e-9 m=1
+xm26 sn1 clk_b agnd agnd nch_mis l=900e-9 w=500e-9 m=1
+xm25 sub sub sub sub nch_mis l=180e-9 w=1e-6 m=3
+xm24 net053 sub sub sub nch_mis l=180e-9 w=1.25e-6 m=1
+xm23 net38 sub sub sub nch_mis l=180e-9 w=1.25e-6 m=1
+xm9 net056 sub sub sub nch_mis l=180e-9 w=1.25e-6 m=1
+xm8 net54 sub sub sub nch_mis l=180e-9 w=1.25e-6 m=1
+xm7 agnd sub sub sub nch_mis l=180e-9 w=1e-6 m=1
+xm6 net42 sub sub sub nch_mis l=180e-9 w=1e-6 m=1
+xm5 net42 sub sub sub nch_mis l=900e-9 w=1e-6 m=1
+xm12 net42 clk agnd sub nch_mis l=180e-9 w=1e-6 m=1
+xm19 net54 sn1 net42 sub nch_mis l=900e-9 w=1e-6 m=2
+xm16 net056 net053 net54 sub nch_mis l=180e-9 w=1.25e-6 m=1
+xm20 net38 sp1 net42 sub nch_mis l=900e-9 w=1e-6 m=2
+xm11 outn net056 agnd sub nch_mis l=180e-9 w=1e-6 m=1
+xm2 net42 sub sub sub nch_mis l=900e-9 w=1e-6 m=1
+xm14 net053 net056 net38 sub nch_mis l=180e-9 w=1.25e-6 m=1
+xm10 outp net053 agnd sub nch_mis l=180e-9 w=1e-6 m=1
+xi39 outn outp avdd agnd sub clk_b_cmp_d1 nor2_adc nl=180e-9 nw=1e-6 nm=1 pl=180e-9 pw=2e-6 pm=1
+*****  .END
