@@ -1,2 +1,2 @@
 # ADC-Analog-to-Digital-Converter-
-ADC simulation files (Only Matlab files)
+ADC matlab models + simulation files
